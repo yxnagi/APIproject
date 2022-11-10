@@ -1,0 +1,3 @@
+2022-11-10 13:59:48 - APIproject.main - INFO - gone to root
+2022-11-10 13:59:57 - APIproject.main - INFO - Requested latitude: 51.5002 and longitude: -0.120000124
+2022-11-10 14:05:29 - APIproject.main - INFO - gone to root
