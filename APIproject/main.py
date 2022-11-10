@@ -22,6 +22,7 @@ log = logging.getLogger(__name__)
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
+websitetrial = Jinja2Templates(directory="templates/websitetrial")
 
 
 @app.get("/")
@@ -52,7 +53,7 @@ def html_output(request: Request):
 
 @app.get("/websitetrial", response_class=HTMLResponse)
 def websitetrial_output(request: Request):
-    return templates.TemplateResponse(
-        "index.html",
+    return websitetrial.TemplateResponse(
+        "indexMA.html",
         {"request": request, "data": ["hello", 1, False]},
     )
