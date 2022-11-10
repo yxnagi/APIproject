@@ -49,3 +49,10 @@ def html_output(request: Request):
         "index.html",
         {"request": request, "data": ["hello", 1, False]},
     )
+
+@app.get("/websitetrial", response_class=HTMLResponse)
+def websitetrial_output(request: Request):
+    return templates.TemplateResponse(
+        "index.html",
+        {"request": request, "data": ["hello", 1, False]},
+    )
